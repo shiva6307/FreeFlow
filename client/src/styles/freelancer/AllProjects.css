@@ -1,0 +1,167 @@
+.all-projects-page {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0vh; /*Ensures the background color starts just below the navbar */
+  font-family: 'Kaushan Script', cursive;
+  background-color: #fae316; /* Background color */
+  padding: 2vh;
+  height: 90vh;
+ 
+}
+
+.all-projects-page .project-filters {
+  width: 20%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 3vh 1.5vw;
+  height: 82vh;
+  border-radius: 0.7rem;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.project-filters h3 {
+  font-size: 1.4rem;
+}
+
+.filters {
+  margin-top: 3vh;
+}
+
+.filters h5 {
+  font-size: 1.1rem;
+}
+
+.filter-options {
+  font-size: 0.9rem;
+}
+
+.projects-list {
+  width: 75%;
+  height: 82vh;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0.7rem;
+  padding: 3vh 2vw;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.projects-list h3 {
+  color: #333;
+}
+
+.projects-list hr {
+  color: rgb(95, 96, 97);
+}
+
+.listed-project:hover {
+  background-color: #efefef58;
+  cursor: pointer;
+}
+
+.projects-list .listed-project .budget {
+  font-size: 0.9rem;
+  
+  color: #27AE60; /* Updated color for bid value */
+  font-weight: bold;
+}
+
+.listed-project p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.listed-project-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+
+.projects-list .listed-project-head h3 {
+  width: 80%;
+  margin-top: 3vh;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.listed-project-head p {
+  margin: 0;
+}
+
+.listed-project .sections-heading {
+  font-size: 1.1rem;
+  color: #e67e22;
+  margin-bottom: 0.5rem;
+}
+
+.listed-project .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.listed-project .skill-badge {
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+.listed-project .bids-data p{
+  display: flex;
+  gap: 8px; 
+  margin-top: 0vh;
+  color:#2C3E50;
+  font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+  .all-projects-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-filters {
+    width: 80%; /* Increased width for better responsiveness */
+    margin-bottom: 2vh;
+  }
+
+  .projects-list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-filters {
+    width: 100%; /* Full width for small mobile screens */
+    margin-bottom: 2vh;
+    padding: 2vh 1vw; /* Adjust padding for smaller screens */
+  }
+
+  .projects-list {
+    width: 100%; /* Full width for projects list */
+  }
+
+  .listed-project-head h3 {
+    font-size: 1.2rem;
+  }
+
+  .listed-project h5,
+  .listed-project p {
+    font-size: 0.8rem;
+  }
+
+  .listed-project .skills h6 {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+}

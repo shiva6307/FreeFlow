@@ -1,0 +1,105 @@
+.all-users-page {
+    font-family: "Kaushan Script", cursive;
+    background-color: #fae316; /* Light yellow background matching admin panel design */
+    padding: 4vh 2vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* Header Card for All Users Title */
+  .header-card {
+    width: 80%;
+    background-color: #fff;
+    padding: 2vh 2vw;
+    border-radius: 0.7rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .header-card h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    
+  }
+  
+  /* User Cards Container */
+  .all-users {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 0 2vw;
+  }
+  
+  /* Individual User Card */
+  .user-card {
+    background-color: #fff;
+    padding: 2vh 1.5vw;
+    border: 1px solid #ee460e5b;
+    border-radius: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* User Information */
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .user-info span {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-info span b {
+    font-weight: 500;
+    color: rgb(6, 7, 7);
+  }
+  
+  .user-info span p {
+    margin: 0;
+    color: green;
+  }
+  
+  /* View User Button */
+  .view-user-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .view-user-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .header-card {
+      width: 90%;
+    }
+    
+    .all-users {
+      grid-template-columns: 1fr;
+    }
+  }
+  

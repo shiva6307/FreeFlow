@@ -1,0 +1,135 @@
+.my-applications-container {
+  padding: 2rem;
+  font-family: "Kaushan Script", cursive;
+  background-color: #fae316;
+  min-height: 100vh;
+}
+
+.main-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.applications-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.applications-title {
+  font-size: 1.9rem;
+  color: #2c3e50;
+  font-weight: 600;
+  
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.application-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.application-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.application-section {
+  width: 48%;
+}
+
+.application-section .application-title {
+  font-size: 1.4rem;
+  color: #000; /* Changed to black */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.application-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: 1rem;
+  color: #e67e22;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-badge {
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.application-budget,
+.application-status {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-top: 0.5rem;
+}
+
+.budget-value {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.status-value {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: center;
+  
+  height: auto; 
+} 
+
+.light-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2); /* Light black line */
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .application-content {
+    flex-direction: column;
+  }
+
+  .application-section {
+    width: 100%;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+}

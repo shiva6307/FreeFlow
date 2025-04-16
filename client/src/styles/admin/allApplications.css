@@ -1,0 +1,176 @@
+/* Overall Page Styling */
+.user-applications-page {
+    padding: 2vh 2vw;
+    background-color: #fae316;
+    font-family: "Kaushan Script", cursive;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main Card Container */
+  .applications-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 2vh 2vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Card for All Applications Title */
+  .applications-header-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5vh 2vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+  
+  .applications-header-card h3 {
+    font-size: 1.8 rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 200;
+  }
+  
+  /* Applications List */
+  .applications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Application Card */
+  .application-card {
+    background-color: #fff;
+    /*border: 1px solid black;  Black border for every card */
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Layout for Application Details */
+    .application-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .application-section {
+    width: 48%;
+  }
+  
+  /* Project Title - set to black */
+  .application-title {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  /* Description & General Text */
+  .application-description {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+  }
+  
+  /* Section Headings for skills, proposal, etc. */
+  .section-heading {
+    font-size: 1rem;
+    color: #E67E22; /* Skill heading color */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Skills List */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Skill Badge: background is #3498DB and text is white */
+  .skill-badge {
+    background-color: #3498DB;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* Budget & Status Text */
+  .application-budget,
+  .application-status {
+    font-size: 1 rem;
+    color: #2c3e50;
+    margin-top: 0.5rem;
+  }
+  
+  /* The budget value itself is green */
+  .budget-value {
+    font-weight: normal;
+    font-size: 0.1 rem;
+    color: #27ae60;
+  }
+
+  .info-value {
+    font-size: 1.2rem;
+    color: #27ae60;
+  }
+  
+  /* Status value is set to #227396b0 */
+  .status-value {
+    font-weight: normal;
+    color: #e74c3c;
+  }
+  
+  /* For headings (labels) and their corresponding values in user details */
+  .user-applications-body h5 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    /* Set the entire h5 text (default) to green for values */
+    color: #27ae60;
+  }
+  .user-applications-body h5 b {
+    /* Set the label (inside <b>) to black */
+    color: #000;
+  }
+  
+  /* Vertical Divider between sections */
+  .vertical-line {
+    width: 1px;
+    background-color: rgba(110, 109, 109, 0.233);
+    height: auto;
+  }
+  
+  /* Light Divider between project and proposal sections */
+  .application-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .application-details {
+      flex-direction: column;
+    }
+    .application-section {
+      width: 100%;
+    }
+    .vertical-line {
+      display: none;
+    }
+  }
+  

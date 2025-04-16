@@ -1,0 +1,48 @@
+.admin-dashboard {
+  padding: 2rem;
+  font-family: "Kaushan Script", cursive;
+  background-color: #fae316;
+  min-height: 100vh;
+  }
+  
+  .dashboard-cards01 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    
+  }
+  
+  .dashboard-card01 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+
+    
+  }
+  
+  .dashboard-card01 h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-card01 p {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 15px;
+  }
+  
+  .dashboard-card01 button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .dashboard-card01 button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,110 @@
+.client-applications-container {
+  padding: 2rem;
+  font-family: 'Kaushan Script', cursive;
+  background-color: #fae316;
+  min-height: 100vh;
+}
+
+.applications-list-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.applications-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.applications-header-card h3 {
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.applications-filter {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 50%;
+}
+
+.applications-list {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.application-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.application-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-section {
+  width: 48%;
+}
+
+.application-divider {
+  width: 1px;
+  background-color: #ddd;
+  height: auto;
+}
+ .application-proposal h5 {
+  font-size: 1.4rem;
+  color: black;
+  margin-bottom: 0.5rem;
+ } 
+.application-skills-section h5
+{
+  font-size: 1.2rem;
+  color: #f15806;
+  margin-bottom: 0.5rem;
+}
+.application-section h4{
+color: #227396b0;
+}
+.skills-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skills-list p {
+  background-color: #e8f4ff;
+  color: #007bff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.application-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.application-actions button {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}

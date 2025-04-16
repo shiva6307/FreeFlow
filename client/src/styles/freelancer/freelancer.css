@@ -1,0 +1,106 @@
+.freelancer-home {
+     padding: 20px; 
+    font-family: 'Kaushan Script', cursive;
+    background-color: #fae316;
+    height: 100vh;
+  }
+  
+  /* Dashboard Cards */
+  .dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+     margin-bottom: 50px; 
+  }
+  
+  .dashboard-card {
+    flex: 1 1 22%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .dashboard-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .dashboard-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #27ae60;
+  }
+  
+  .primary-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer; 
+      
+  }
+  
+  .primary-btn:hover {
+    
+    background: #0056b3; 
+  } 
+  
+  /* Freelancer Details */
+  .freelancer-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-section {
+    margin-bottom: 20px;
+  }
+  
+  .details-section h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-chip {
+    padding: 5px 15px;
+    background: #27ae60;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  } 
+
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  textarea,
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  textarea:focus,
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  

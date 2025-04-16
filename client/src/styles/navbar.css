@@ -1,0 +1,88 @@
+.navbar {
+    height: 10vh; /* Ensures a consistent navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    font-family: "Kaushan Script", cursive;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar h3 {
+    color: rgba(239, 154, 117, 0.916);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem; /* Adds spacing between buttons */
+    flex: 1;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-options button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevents text wrapping in buttons */
+}
+
+.nav-options button:hover {
+    background-color: #0056b3;
+}
+
+.hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-options {
+        display: none; /* Hide menu for smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 11vh;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        padding: 10px 0;
+    }
+
+    .nav-options.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-options button {
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+}

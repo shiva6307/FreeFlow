@@ -1,0 +1,78 @@
+.new-project-page {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #fae316;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 2vw;
+    font-family: 'Kaushan Script', cursive;
+  }
+  
+  .new-project-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.7rem;
+    padding: 3vh 2vw;
+  }
+  
+  .new-project-container h3 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 3vh;
+    text-align: center;
+  }
+  
+  .new-project-form .form-floating {
+    margin-bottom: 2vh;
+  }
+  
+  .new-project-form .form-floating input,
+  .new-project-form .form-floating textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+  }
+  
+  .new-project-form .form-floating label {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .new-project-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+  }
+  
+  .new-project-form .form-row .form-floating {
+    flex: 1;
+  }
+  
+  .new-project-form .form-floating textarea {
+    min-height: 30vh;
+  }
+  
+  .new-project-form .btn-submit {
+    width: 100%;
+    height: 8vh;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .new-project-form .btn-submit:hover {
+    background-color: #0056b3; 
+    color: #fff;
+    cursor: pointer;
+  }
+  
