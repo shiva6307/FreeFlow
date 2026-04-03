@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/client/newProject.css';
+import { API_URL } from '../../config.js';
 
 const NewProject = () => {
   const [title, setTitle] = useState('');
@@ -12,7 +13,7 @@ const NewProject = () => {
 
   const handleSubmit = async () => {
     await axios
-      .post('http://localhost:6001/new-project', {
+      .post(`${API_URL}/new-project`, {
         title,
         description,
         budget,

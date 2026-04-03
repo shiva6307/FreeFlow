@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/freelancer/MyApplications.css";
 import axios from "axios";
+import { API_URL } from "../../config.js";
 
 const MyApplications = () => {
   const [applications, setApplications] = useState([]);
@@ -11,7 +12,7 @@ const MyApplications = () => {
 
   const fetchApplications = async () => {
     await axios
-      .get("http://localhost:6001/fetch-applications")
+      .get(`${API_URL}/fetch-applications`)
       .then((response) => {
         setApplications(response.data.reverse());
       })

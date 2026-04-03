@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/admin/admin.css'
 import axios from 'axios';
+import { API_URL } from '../../config.js';
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Admin = () => {
 
   const fetchProjects = async () => {
     await axios
-      .get('http://localhost:6001/fetch-projects')
+      .get(`${API_URL}/fetch-projects`)
       .then((response) => {
         setProjectsCount(response.data.length);
         const comPros = response.data.filter((pro) => pro.status === 'Completed');
@@ -32,7 +33,7 @@ const Admin = () => {
 
   const fetchApplications = async () => {
     await axios
-      .get('http://localhost:6001/fetch-applications')
+      .get(`${API_URL}/fetch-applications`)
       .then((response) => {
         setApplicationsCount(response.data.length);
       })
@@ -43,7 +44,7 @@ const Admin = () => {
 
   const fetchUsers = async () => {
     await axios
-      .get('http://localhost:6001/fetch-users')
+      .get(`${API_URL}/fetch-users`)
       .then((response) => {
         setUsersCount(response.data.length);
       })

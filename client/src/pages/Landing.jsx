@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../styles/landing.css';
 
 import { useNavigate } from 'react-router-dom';
+import logo from '../images/srmcem_head_logo-BN0LEybD.png'; // ✅ Import logo image
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -20,7 +21,10 @@ const Landing = () => {
     <div className="landing-page">
       {/* Navbar */}
       <div className="landing-nav">
-        <h3>FreeFlow</h3>
+      <div className="logo-container">
+          <img src={logo} alt="Logo" className="navbar-logo" />
+          <h3 class="navbar-title">FreeFlow-freelancing platform</h3>
+        </div>
         <div className="auth-buttons">
           {/*<button onClick={() => navigate('/authenticate')}>Sign Up</button>*/}
           <button onClick={() => navigate('/authenticate')}>Login</button>

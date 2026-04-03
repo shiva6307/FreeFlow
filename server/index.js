@@ -7,21 +7,33 @@ import { Application, Chat, Freelancer, Project, User } from './Schema.js';
 import { Server } from 'socket.io';
 import http from 'http';
 import SocketHandler from './SocketHandler.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
+
+const allowedOrigins = process.env.FRONTEND_URL 
+    ? [process.env.FRONTEND_URL] 
+    : ['http://localhost:3000', '*'];
 
 app.use(express.json());
 app.use(bodyParser.json({limit: "30mb", extended: true}))
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
-app.use(cors());
+app.use(cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: '*',
-        methods: ['GET', 'POST', 'PUT', 'DELETE']
+        origin: allowedOrigins,
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
     }
 });
 
@@ -32,9 +44,10 @@ io.on("connection", (socket) =>{
 })
 
 
-const PORT = 6001;
+const PORT = process.env.PORT || 6001;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Freelancing';
 
-mongoose.connect('mongodb://localhost:27017/Freelancing',{
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "../styles/navbar.css";
 import { useNavigate } from "react-router-dom";
 import { GeneralContext } from "../context/GeneralContext";
+import logo from '../images/srmcem_head_logo-BN0LEybD.png'; // ✅ Import logo image
 
 const Navbar = () => {
   const userId = localStorage.getItem("userId");
@@ -54,7 +55,10 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <h3>FreeFlow</h3>
+      <div className="logo-container">
+                <img src={logo} alt="Logo" className="navbar-logo" />
+                <h3 class="navbar-title">FreeFlow-freelancing platform</h3>
+              </div>
       <div className={`nav-options ${menuOpen ? "active" : ""}`}>
         {renderNavOptions()}
       </div>

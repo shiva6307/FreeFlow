@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../styles/freelancer/freelancer.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../../config.js';
 
 const Freelancer = () => {
   const [isDataUpdateOpen, setIsDataUpdateOpen] = useState(false);
@@ -20,7 +21,7 @@ const Freelancer = () => {
   }, []);
 
   const fetchUserData = async (id) => {
-    axios.get(`http://localhost:6001/fetch-freelancer/${id}`).then((response) => {
+    axios.get(`${API_URL}/fetch-freelancer/${id}`).then((response) => {
       setFreelancerData(response.data);
       if (response.data) {
         setFreelancerId(response.data._id);
@@ -34,7 +35,7 @@ const Freelancer = () => {
 
   const updateUserData = async () => {
     axios
-      .post('http://localhost:6001/update-freelancer', {
+      .post(`${API_URL}/update-freelancer`, {
         freelancerId,
         updateSkills: updateSkills,
         description: updateDescription,
@@ -47,7 +48,7 @@ const Freelancer = () => {
 
   const fetchApplications = async () => {
     await axios
-      .get('http://localhost:6001/fetch-applications')
+      .get(`${API_URL}/fetch-applications`)
       .then((response) => {
         setApplicationsCount(
           response.data.filter(

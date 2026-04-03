@@ -192,3 +192,24 @@
     font-size: 0.8em;
   }
 }
+
+/* Logo styling in navbar */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* reduce or set to 0 */
+}
+
+.navbar-logo {
+  height: 55px;
+  width: auto;
+  
+  margin-right: 0; /* remove any extra spacing */
+  padding-right: 0;
+}
+
+.navbar-title {
+  margin-left: 10px; /* ensure no margin on text */
+  padding-left: 0;
+}
+
