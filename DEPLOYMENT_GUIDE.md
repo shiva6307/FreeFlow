@@ -20,10 +20,10 @@ Before starting, make sure you have:
 
 ### Your Connection String:
 ```
-mongodb+srv://shivmishra6307_db_user:<db_password>@cluster0.tul7c80.mongodb.net/
+mongodb+srv://shivmishra6307_db_user:Shiva%4012345@cluster0.tul7c80.mongodb.net/
 ```
 
-**Note**: Replace `<db_password>` with your actual Atlas password.
+**Note**: Your password contains a special character (`@`), so it needs to be URL-encoded as `%40`. Use the exact string above for the MONGODB_URI environment variable in Render.
 
 To get the full connection string:
 1. Go to MongoDB Atlas → Your Cluster
@@ -55,7 +55,7 @@ In the Render dashboard, go to your service → Environment:
 
 Add these variables:
 ```
-MONGODB_URI=mongodb+srv://shivmishra6307_db_user:<db_password>@cluster0.tul7c80.mongodb.net/
+MONGODB_URI=mongodb+srv://shivmishra6307_db_user:Shiva%4012345@cluster0.tul7c80.mongodb.net/
 PORT=10000
 FRONTEND_URL=https://your-vercel-domain.vercel.app
 NODE_ENV=production
@@ -149,6 +149,17 @@ If you encounter issues, check:
 - Verify MongoDB Atlas credentials are correct
 - Check that your IP address is whitelisted in MongoDB Atlas (Security → Network Access)
 - Ensure the database name in connection string is correct
+- **If your password contains special characters** (like `@`), make sure it's URL-encoded:
+  - `@` becomes `%40`
+  - `!` becomes `%21`
+  - `#` becomes `%23`
+  - etc.
+
+### "Invalid scheme" MongoDB Error
+If you see: `MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"`
+- Check that your MONGODB_URI environment variable is set correctly
+- Ensure special characters in passwords are URL-encoded
+- Verify the connection string format is correct
 
 ### WebSocket Connection Issues
 - WebSocket should use the same URL as your API (`REACT_APP_WS_URL`)

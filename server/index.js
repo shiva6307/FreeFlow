@@ -48,10 +48,10 @@ const PORT = process.env.PORT || 6001;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Freelancing';
 
 mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    // useNewUrlParser: true,  // Deprecated in MongoDB driver 4.0+
+    // useUnifiedTopology: true  // Deprecated in MongoDB driver 4.0+
 }).then(()=>{
-
+        console.log("MongoDB Atlas Connected Successfully!");
 
     app.post('/register', async (req, res) =>{
         try{
